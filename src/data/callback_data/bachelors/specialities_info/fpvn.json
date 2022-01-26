@@ -1,0 +1,18 @@
+{
+  "law": {
+    "button_disciplines": "bachelor_law_disciplines",
+    "button_zno": "bachelor_law_zno",
+    "button_students_number": "bachelor_law_students_number",
+    "button_cost": "bachelor_law_cost",
+    "button_score_needed": "bachelor_law_score_needed",
+    "button_count_score": "bachelor_law_count_score"
+  },
+  "government": {
+    "button_disciplines": "bachelor_government_disciplines",
+    "button_zno": "bachelor_government_zno",
+    "button_students_number": "bachelor_government_students_number",
+    "button_cost": "bachelor_government_cost",
+    "button_score_needed": "bachelor_government_score_needed",
+    "button_count_score": "bachelor_government_count_score"
+  }
+}

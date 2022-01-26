@@ -1,0 +1,35 @@
+{
+  "economics": {
+    "button_disciplines": "bachelor_economics_disciplines",
+    "button_zno": "bachelor_economics_zno",
+    "button_students_number": "bachelor_economics_students_number",
+    "button_cost": "bachelor_economics_cost",
+    "button_score_needed": "bachelor_economics_score_needed",
+    "button_count_score": "bachelor_economics_count_score"
+  },
+  "finance": {
+    "button_disciplines": "bachelor_finance_disciplines",
+    "button_zno": "bachelor_finance_zno",
+    "button_students_number": "bachelor_finance_students_number",
+    "button_cost": "bachelor_finance_cost",
+    "button_score_needed": "bachelor_finance_score_needed",
+    "button_count_score": "bachelor_finance_count_score"
+  },
+  "marketing": {
+    "button_disciplines": "bachelor_marketing_disciplines",
+    "button_zno": "bachelor_marketing_zno",
+    "button_students_number": "bachelor_marketing_students_number",
+    "button_cost": "bachelor_marketing_cost",
+    "button_score_needed": "bachelor_marketing_score_needed",
+    "button_count_score": "bachelor_marketing_count_score"
+  },
+  "management": {
+    "button_disciplines": "bachelor_management_disciplines",
+    "button_zno": "bachelor_management_zno",
+    "button_students_number": "bachelor_management_students_number",
+    "button_cost": "bachelor_management_cost",
+    "button_score_needed": "bachelor_management_score_needed",
+    "button_count_score": "bachelor_management_count_score"
+  },
+  "button_back": "bachelor_fen_speciality_info_back"
+}

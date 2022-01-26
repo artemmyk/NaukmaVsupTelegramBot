@@ -1,11 +1,16 @@
 from aiogram import Bot, Dispatcher, executor, types
 from db.operations import check_if_user_in_db, add_user_to_db, check_if_user_is_admin, get_all_chat_ids
 
+from handlers.register_handlers import register_all_handlers
+from keyboards.main_menu_keyboard import main_menu_keyboard
+
 BOT_TOKEN = "5077592058:AAGPmoUShW56UGfVxNGrJ8c0BNHRPqM98-w"
 
 # Initialize bot and dispatcher
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot)
+
+register_all_handlers(dp)
 
 
 @dp.message_handler(commands=['start', 'help'])
@@ -14,11 +19,12 @@ async def send_welcome(message: types.Message):
     This handler will be called when user sends `/start` or `/help` command
     """
 
-    # check if user is in database (if not then add to db)
-    if not check_if_user_in_db(message.from_user.id):
-        add_user_to_db(message.from_user.id)
+    # # check if user is in database (if not then add to db)
+    # if not check_if_user_in_db(message.from_user.id):
+    #     add_user_to_db(message.from_user.id)
 
-    await message.reply("Hi!\nI'm EchoBot!\nPowered by aiogram.")
+    await message.answer("Hi!", reply_markup=main_menu_keyboard)
+
 
 @dp.message_handler(commands=['admin'])
 async def admin(message: types.Message):
@@ -38,12 +44,14 @@ async def admin(message: types.Message):
 
     await message.reply(msg)
 
-@dp.message_handler()
-async def echo(message: types.Message):
-    # old style:
-    # await bot.send_message(message.chat.id, message.text)
 
-    await message.answer(message.text)
+# @dp.message_handler()
+# async def echo(message: types.Message):
+#     # old style:
+#     # await bot.send_message(message.chat.id, message.text)
+#
+#     await message.answer(message.text, reply_markup=get_specialities_keyboard("fhn"))
+
 
 
 if __name__ == '__main__':
