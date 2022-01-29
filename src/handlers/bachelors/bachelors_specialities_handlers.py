@@ -4,9 +4,9 @@ from aiogram.types import CallbackQuery
 
 from handlers.states import States
 from handlers.text import common_message_text
+from keyboards.bachelors.faculties_keyboard import faculties_keyboard
 from keyboards.bachelors.specialities_info_keyboard import get_speciality_info_keyboard
-from keyboards.bachelors.specialities_keyboard import get_specialities_keyboard
-from keyboards.text import bachelor_specialities_button_text, common_button_text
+from keyboards.text import bachelor_specialities_button_text
 
 
 async def speciality_command(callback: CallbackQuery, state: FSMContext):
@@ -26,15 +26,12 @@ async def speciality_command(callback: CallbackQuery, state: FSMContext):
     await callback.answer()
 
 
-async def back_command(callback: CallbackQuery, state: FSMContext):
-    async with state.proxy() as data:
-        faculty_name = data["faculty_name"]
-
+async def back_command(callback: CallbackQuery):
     await States.previous()
 
     await callback.message.delete()
     await callback.message.answer(common_message_text["choose_menu_item"],
-                                  reply_markup=get_specialities_keyboard(faculty_name))
+                                  reply_markup=faculties_keyboard)
     await callback.answer()
 
 
@@ -49,6 +46,6 @@ def register_handlers(dp: Dispatcher):
 
     dp.register_callback_query_handler(
         back_command,
-        text=common_button_text["button_back"],
+        text="button_back",
         state=States.bachelor_specialities,
     )

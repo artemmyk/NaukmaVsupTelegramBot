@@ -37,3 +37,8 @@ def register_handlers(dp: Dispatcher):
             text=key,
             state=States.bachelor_faculties,
         )
+    dp.register_callback_query_handler(
+        back_command,
+        text="button_back",
+        state=States.bachelor_faculties,
+    )
