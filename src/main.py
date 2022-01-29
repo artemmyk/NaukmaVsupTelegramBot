@@ -1,4 +1,6 @@
 from aiogram import Bot, Dispatcher, executor, types
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
+
 from db.operations import check_if_user_in_db, add_user_to_db, check_if_user_is_admin, get_all_chat_ids
 
 from handlers.register_handlers import register_all_handlers
@@ -8,7 +10,8 @@ BOT_TOKEN = "5077592058:AAGPmoUShW56UGfVxNGrJ8c0BNHRPqM98-w"
 
 # Initialize bot and dispatcher
 bot = Bot(token=BOT_TOKEN)
-dp = Dispatcher(bot)
+storage = MemoryStorage()
+dp = Dispatcher(bot, storage=storage)
 
 register_all_handlers(dp)
 
@@ -43,15 +46,6 @@ async def admin(message: types.Message):
         msg = "you are not admin"
 
     await message.reply(msg)
-
-
-# @dp.message_handler()
-# async def echo(message: types.Message):
-#     # old style:
-#     # await bot.send_message(message.chat.id, message.text)
-#
-#     await message.answer(message.text, reply_markup=get_specialities_keyboard("fhn"))
-
 
 
 if __name__ == '__main__':

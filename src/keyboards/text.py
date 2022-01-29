@@ -21,5 +21,5 @@ speciality_info_button_text = json.load(
     open("data/text/button_text/speciality_info.json", encoding="utf-8"))
 
 # speciality info links
-bachelor_fen_specialities_links = json.load(
-    open("data/text/links/fen.json", encoding="utf-8"))
+bachelor_specialities_links = json.load(
+    open("data/text/links/links.json", encoding="utf-8"))

@@ -2,12 +2,14 @@ from aiogram.dispatcher.filters import Text
 from aiogram.types import Message
 from aiogram import Dispatcher
 
+from handlers.states import States
 from keyboards.bachelors.home_keyboard import home_keyboard
 from keyboards.text import main_menu_button_text
 from handlers.text import common_message_text
 
 
 async def bachelor_command(message: Message):
+    await States.bachelor_main.set()
     await message.answer(common_message_text["choose_menu_item"], reply_markup=home_keyboard)
 
 

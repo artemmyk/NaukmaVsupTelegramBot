@@ -1,0 +1,134 @@
+{
+  "fen": {
+    "economics": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
+      "button_speciality_site": "https://www.google.com/",
+      "button_youtube": "https://www.google.com/"
+    },
+    "finance": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
+      "button_speciality_site": "https://www.google.com/",
+      "button_youtube": "https://www.google.com/"
+    },
+    "marketing": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870456",
+      "button_speciality_site": "https://www.google.com/",
+      "button_youtube": "https://www.google.com/"
+    },
+    "management": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_speciality_site": "https://www.google.com/",
+      "button_youtube": "https://www.google.com/"
+    }
+  },
+  "fsnst": {
+    "politology": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "social_work": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "public_relations": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870456",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "international_relations": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "sociology": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "psychology": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    }
+  },
+  "fprn": {
+    "bio": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "ecology": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "chemistry": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870456",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "physics_astronomy": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    }
+  },
+  "fpvn": {
+    "law": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "government": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    }
+  },
+  "fi": {
+    "applied_math": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "ipz": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "cs": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870456",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    }
+  },
+  "fhn": {
+    "history": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "philosophy": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "culturology": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870456",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "german_philology": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    },
+    "ukrainian_philology": {
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_speciality_site": "",
+      "button_youtube": ""
+    }
+  }
+}
