@@ -2,7 +2,7 @@ from aiogram import Dispatcher
 from aiogram.dispatcher import FSMContext
 from aiogram.types import CallbackQuery
 
-from handlers.text import common_message_text
+from data.text.message_text.text import common_message_text
 from keyboards.main_menu_keyboard import main_menu_keyboard
 
 

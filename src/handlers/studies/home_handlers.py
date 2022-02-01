@@ -2,9 +2,8 @@ from aiogram import Dispatcher
 from aiogram.types import CallbackQuery
 
 from handlers.states import States
-from handlers.text import common_message_text
-from keyboards.bachelors.faculties_keyboard import faculties_keyboard
-from keyboards.text import bachelor_home_button_text
+from data.text.message_text.text import common_message_text
+from keyboards.studies.faculties_keyboard import faculties_keyboard
 
 
 async def faculties_command(callback: CallbackQuery):
@@ -22,11 +21,11 @@ async def admission_rules_command(callback: CallbackQuery):
 def register_handlers(dp: Dispatcher):
     dp.register_callback_query_handler(
         faculties_command,
-        state=States.bachelor_main,
+        state=States.studies_main_menu,
         text="button_faculties"
     )
     dp.register_callback_query_handler(
         admission_rules_command,
-        state=States.bachelor_main,
+        state=States.studies_main_menu,
         text="button_admission_rules"
     )

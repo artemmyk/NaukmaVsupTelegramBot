@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from keyboards.button_exit import button_exit
-from keyboards.text import common_button_text, faculties_button_text
+from data.text.button_text.text import common_button_text, faculties_button_text
 
 
 def get_faculties_keyboard():
