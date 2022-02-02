@@ -1,5 +1,5 @@
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
-from data.text.button_text.text import main_menu_button_text
+from data.text.button_text.general_button_text import main_menu_button_text
 
 button_bachelors = KeyboardButton(main_menu_button_text["button_bachelors"])
 button_masters = KeyboardButton(main_menu_button_text["button_masters"])

@@ -6,7 +6,7 @@ from handlers.states import States
 from data.text.message_text.text import common_message_text
 from keyboards.studies.home_keyboard import get_home_keyboard
 from keyboards.studies.specialities_keyboard import get_specialities_keyboard
-from data.text.button_text.text import faculties_button_text
+from data.text.button_text.studies.studies_button_text import faculties_menu_button_text
 
 
 async def faculty_command(callback: CallbackQuery, state: FSMContext):
@@ -36,7 +36,7 @@ async def back_command(callback: CallbackQuery, state: FSMContext):
 
 
 def register_handlers(dp: Dispatcher):
-    for key in faculties_button_text.keys():
+    for key in faculties_menu_button_text.keys():
         dp.register_callback_query_handler(
             faculty_command,
             text=key,

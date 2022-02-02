@@ -42,7 +42,7 @@ async def students_number_command(callback: CallbackQuery, state: FSMContext):
 
 
 async def cost_command(callback: CallbackQuery, state: FSMContext):
-    await get_info_command("button_cost", callback, state)
+    await get_info_command("button_tuition_cost", callback, state)
 
 
 async def score_needed_command(callback: CallbackQuery, state: FSMContext):
@@ -71,7 +71,7 @@ commands = {
   "button_disciplines": disciplines_command,
   "button_zno": zno_command,
   "button_students_number": students_number_command,
-  "button_cost": cost_command,
+  "button_tuition_cost": cost_command,
   "button_score_needed": score_needed_command,
   "button_count_score": count_score_command,
 }

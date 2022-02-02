@@ -1,7 +1,7 @@
 {
-  "button_general_info": "",
-  "button_student_activity": "",
-  "button_dormitories": "",
-  "button_study_system": "",
-  "button_infrastructure": ""
+  "button_general_info": "Загальна інформація",
+  "button_student_activity": "Студентська активність",
+  "button_dormitories": "Гуртожитки",
+  "button_study_system": "Система навчання",
+  "button_infrastructure": "Інфраструктура"
 }

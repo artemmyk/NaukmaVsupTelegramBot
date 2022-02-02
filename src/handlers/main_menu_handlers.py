@@ -5,7 +5,8 @@ from aiogram import Dispatcher
 
 from handlers.states import States
 from keyboards.studies.home_keyboard import get_home_keyboard
-from data.text.button_text.text import main_menu_button_text
+from keyboards.about_naukma.home_keyboard import home_keyboard
+from data.text.button_text.general_button_text import main_menu_button_text
 from data.text.message_text.text import common_message_text
 
 
@@ -27,8 +28,9 @@ async def study_level_command(study_level: str, message: Message, state: FSMCont
 
 
 async def about_naukma_command(message: Message):
-    pass
-    # TODO
+    await States.about_naukma_main_menu.set()
+
+    await message.answer(common_message_text["choose_menu_item"], reply_markup=home_keyboard)
 
 
 def register_handlers(dp: Dispatcher):
