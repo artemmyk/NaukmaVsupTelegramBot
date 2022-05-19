@@ -4,7 +4,6 @@ from aiogram.dispatcher import filters
 from aiogram.utils import exceptions
 import asyncio
 
-
 from db.operations import check_if_user_in_db, add_user_to_db, check_if_user_is_admin, get_all_chat_ids
 
 from handlers.register_handlers import register_all_handlers
@@ -26,30 +25,21 @@ async def send_welcome(message: types.Message):
     This handler will be called when user sends `/start` or `/help` command
     """
 
-    # # check if user is in database (if not then add to db)
-    # if not check_if_user_in_db(message.from_user.id):
-    #     add_user_to_db(message.from_user.id)
+    # check if user is in database (if not then add to db)
+    if not check_if_user_in_db(message.from_user.id):
+        add_user_to_db(message.from_user.id)
 
-    await message.answer("Привіт фреш.", reply_markup=main_menu_keyboard)
+    await message.answer("Привіт фреш", reply_markup=main_menu_keyboard)
 
 
 @dp.message_handler(filters.Text(contains="Повідомлення для всіх"))
 async def admin(message: types.Message):
-    """
-    This handler will be called when user sends `/admin` command
-    It will check if user is admin (in database) and call
-    'Message for all' function
-    """
-
-    # TODO: create handler for message that will be sent to all users
     if check_if_user_is_admin(message.from_user.id):
         text = message.text.replace("Повідомлення для всіх", "")
-        try:
-            for user_id in get_all_chat_ids():
-                await bot.send_message(user_id, text)
-                await asyncio.sleep(.05)
-        except:
-            await message.reply("Error occurred")
+
+        for user_id in get_all_chat_ids():
+            await bot.send_message(user_id, text)
+            await asyncio.sleep(.05)
 
 
 async def send_message(user_id: int, text: str, disable_notification: bool = False) -> bool:
