@@ -19,7 +19,7 @@ dp = Dispatcher(bot, storage=storage)
 register_all_handlers(dp)
 
 
-@dp.message_handler(commands=['start', 'help'])
+@dp.message_handler(commands=['start', 'help'], chat_type=[types.ChatType.PRIVATE])
 async def send_welcome(message: types.Message):
     """
     This handler will be called when user sends `/start` or `/help` command
