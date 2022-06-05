@@ -9,6 +9,18 @@ def get_database():
     # TODO: hide connection string
     CONNECTION_STRING = "mongodb+srv://Vadym:1234@cluster0.0ljal.mongodb.net/vstup_bot?retryWrites=true&w=majority"
 
-    client = MongoClient(CONNECTION_STRING)
+    try:
+        client = MongoClient(CONNECTION_STRING)
 
-    return client.get_database("vstup_bot")
+        return client.get_database("vstup_bot")
+    except:
+        print("Database connection failed")
+        return None
+
+
+def get_collection():
+
+    db = get_database()
+    if db:
+        return db["users"]
+    return None
