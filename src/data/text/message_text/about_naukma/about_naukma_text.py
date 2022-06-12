@@ -1,5 +1,5 @@
 import json
-from data.text.parsing import replace_reserved_characters
+from data.text.parser import replace_reserved_characters
 
 # message text of about naukma home menu
 home_message_text = replace_reserved_characters(json.load(open("data/text/message_text/about_naukma/home.json", encoding="utf-8")))

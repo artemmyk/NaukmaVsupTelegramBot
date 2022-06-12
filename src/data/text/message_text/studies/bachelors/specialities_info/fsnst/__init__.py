@@ -1,17 +1,18 @@
 import json
+from data.text.parser import replace_reserved_characters
 
-international_relations_info = json.load(
-    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/international_relations.json", encoding="utf-8"))
-politology_info = json.load(
-    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/politology.json", encoding="utf-8"))
-psychology_info = json.load(
-    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/psychology.json", encoding="utf-8"))
-public_relations_info = json.load(
-    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/public_relations.json", encoding="utf-8"))
-social_work_info = json.load(
-    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/social_work.json", encoding="utf-8"))
-sociology_info = json.load(
-    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/sociology.json", encoding="utf-8"))
+international_relations_info = replace_reserved_characters(json.load(
+    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/international_relations.json", encoding="utf-8")))
+politology_info = replace_reserved_characters(json.load(
+    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/politology.json", encoding="utf-8")))
+psychology_info = replace_reserved_characters(json.load(
+    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/psychology.json", encoding="utf-8")))
+public_relations_info = replace_reserved_characters(json.load(
+    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/public_relations.json", encoding="utf-8")))
+social_work_info = replace_reserved_characters(json.load(
+    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/social_work.json", encoding="utf-8")))
+sociology_info = replace_reserved_characters(json.load(
+    open("data/text/message_text/studies/bachelors/specialities_info/fsnst/sociology.json", encoding="utf-8")))
 
 
 fsnst_specialities_info = {

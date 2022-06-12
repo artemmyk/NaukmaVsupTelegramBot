@@ -2,12 +2,12 @@
   "fen": {
     "economics": {
       "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-04-05-15-42-31/90-economictheory",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-04-05-15-42-31/90-bakalavr/economictheory",
       "button_youtube": "https://www.google.com/"
     },
     "finance": {
       "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-04-05-15-42-31/85-financecredit",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-04-05-15-42-31/85-bakalavr/financecredit",
       "button_youtube": "https://www.google.com/"
     },
     "marketing": {
@@ -23,110 +23,110 @@
   },
   "fsnst": {
     "politology": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/869447",
       "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fsnst/167-2018-06-13-09-07-15/bppolitologiya",
       "button_youtube": "https://www.google.com/"
     },
     "social_work": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/images/ects/docs/op/OP_231_social_work_2020_updated.pdf",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/835055",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fsnst/187-2018-06-13-09-07-15/c",
       "button_youtube": "https://www.google.com/"
     },
     "public_relations": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870456",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/images/ects/docs/pablic%20rlations.pdf",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/899654",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fsnst/260-2018-06-13-09-07-15/bpjurlanistics",
       "button_youtube": "https://www.google.com/"
     },
     "international_relations": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/images/ects/docs/op/OP_291_FR_2021_upadated.pdf",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870622",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fsnst/194-2018-06-13-09-07-15/mvbp",
       "button_youtube": "https://www.google.com/"
     },
     "sociology": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fsnst/155-bpsociologiya",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/872511",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fsnst/155-2018-06-13-09-07-15/bpsociologiya",
       "button_youtube": "https://www.google.com/"
     },
     "psychology": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/866256",
       "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fsnst/190-2018-06-13-09-07-15/psychology",
       "button_youtube": "https://www.google.com/"
     }
   },
   "fprn": {
     "bio": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-11-13-16-43-44/151-2018-06-13-06-44-45/bpbiologiya",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830844",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-11-13-16-43-44/151-2018-06-13-06-44-45/bpbiologiyaa",
       "button_youtube": "https://www.google.com/"
     },
     "ecology": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/873954",
       "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-11-13-16-43-44/153-2018-06-13-06-44-45/bpekologiya",
       "button_youtube": "https://www.google.com/"
     },
     "chemistry": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870456",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-11-13-16-43-44/149-bphimiya",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830843",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-11-13-16-43-44/149-2018-06-13-06-44-45/bphimiya",
       "button_youtube": "https://www.google.com/"
     },
     "physics_astronomy": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/825878",
       "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-11-13-16-43-44/147-2018-06-13-06-44-45/bpfizika",
       "button_youtube": "https://www.google.com/"
     }
   },
   "fpvn": {
     "law": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fprn/141-pravo",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/825684",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fprn/141-2018-06-15-07-25-14/pravo",
       "button_youtube": "https://www.google.com/"
     },
     "government": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fprn/262-2018-06-15-07-25-14/bppa/290-op-suspilne-privatne-vriaduvannia",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/941811",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fprn/262-2018-06-15-07-25-14/bppa",
       "button_youtube": "https://www.google.com/"
     }
   },
   "fi": {
     "applied_math": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/865950",
       "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-04-18-08-31-28/161-2018-06-13-06-36-40/bpprimat",
       "button_youtube": "https://www.google.com/"
     },
     "ipz": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/835480",
       "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-04-18-08-31-28/163-2018-06-13-06-36-40/bpprogin",
       "button_youtube": "https://www.google.com/"
     },
     "cs": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870456",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-04-18-08-31-28/181-bpi",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/871335",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/2011-04-18-08-31-28/181-2018-06-13-06-36-40/bpi",
       "button_youtube": "https://www.google.com/"
     }
   },
   "fhn": {
     "history": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/830845",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fgn/157-bpistoriya",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/840412",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fgn/157-2018-06-13-07-01-47/bpistoriya",
       "button_youtube": "https://www.google.com/"
     },
     "philosophy": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870419",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fgn/165-bpfilisofiya",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/876523",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fgn/165-2018-06-13-07-01-47/bpfilisofiya",
       "button_youtube": "https://www.google.com/"
     },
     "culturology": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870456",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fgn/159-bpkulturologiya",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/840411",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fgn/159-2018-06-13-07-01-47/bpkulturologiya",
       "button_youtube": "https://www.google.com/"
     },
     "german_philology": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
-      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fgn/169-bpfilologiya",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/815650",
+      "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fgn/169-2018-06-13-07-01-47/bpfilologiya",
       "button_youtube": "https://www.google.com/"
     },
     "ukrainian_philology": {
-      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/870418",
+      "button_konkurs_ukma": "https://konkurs.ukma.edu.ua/#2021/spec/812608",
       "button_speciality_site": "https://www.ukma.edu.ua/ects/index.php/fgn/195-2018-06-13-07-01-47/bpfilologiya-2",
       "button_youtube": "https://www.google.com/"
     }
