@@ -21,6 +21,6 @@ def get_database():
 def get_collection():
 
     db = get_database()
-    if db:
+    if db is not None:
         return db["users"]
     return None
