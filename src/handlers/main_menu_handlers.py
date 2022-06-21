@@ -4,9 +4,9 @@ from aiogram.types import Message, InlineKeyboardMarkup
 from aiogram import Dispatcher, types
 
 from handlers.states import States
-from keyboards.common_buttons import button_back, button_exit
-from keyboards.studies.home_keyboard import get_home_keyboard
-from keyboards.about_naukma.home_keyboard import home_keyboard
+from keyboards.common_buttons import button_exit
+from keyboards.studies.home_keyboard import studies_home_keyboard
+from keyboards.about_naukma.home_keyboard import about_naukma_home_keyboard
 from data.text.button_text.general_button_text import main_menu_button_text
 from data.text.message_text.text import common_message_text, support_message_text
 
@@ -25,13 +25,13 @@ async def study_level_command(study_level: str, message: Message, state: FSMCont
     async with state.proxy() as data:
         data["study_level"] = study_level
 
-    await message.answer(common_message_text["choose_menu_item"], reply_markup=get_home_keyboard(study_level))
+    await message.answer(common_message_text["choose_menu_item"], reply_markup=studies_home_keyboard)
 
 
 async def about_naukma_command(message: Message):
     await States.about_naukma_main_menu.set()
 
-    await message.answer(common_message_text["choose_menu_item"], reply_markup=home_keyboard)
+    await message.answer(common_message_text["choose_menu_item"], reply_markup=about_naukma_home_keyboard)
 
 
 async def support_command(message: Message):

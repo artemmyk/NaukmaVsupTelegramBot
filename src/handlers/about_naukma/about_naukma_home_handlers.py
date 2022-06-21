@@ -4,7 +4,7 @@ from aiogram.types import CallbackQuery
 from data.text.message_text.about_naukma.about_naukma_text import home_message_text
 from data.text.message_text.text import common_message_text
 from handlers.states import States
-from keyboards.about_naukma.home_keyboard import home_keyboard
+from keyboards.about_naukma.home_keyboard import about_naukma_home_keyboard
 from keyboards.about_naukma.submenu_keyboard import get_student_activity_menu_keyboard, \
     get_dormitories_menu_keyboard, get_infrastructure_menu_keyboard
 
@@ -12,7 +12,7 @@ from keyboards.about_naukma.submenu_keyboard import get_student_activity_menu_ke
 async def general_info_command(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(home_message_text["button_general_info"])
-    await callback.message.answer(common_message_text["choose_menu_item"], reply_markup=home_keyboard)
+    await callback.message.answer(common_message_text["choose_menu_item"], reply_markup=about_naukma_home_keyboard)
     await callback.answer()
 
 
@@ -37,7 +37,7 @@ async def dormitories_command(callback: CallbackQuery):
 async def study_system_command(callback: CallbackQuery):
     await callback.message.delete()
     await callback.message.answer(home_message_text["button_study_system"])
-    await callback.message.answer(common_message_text["choose_menu_item"], reply_markup=home_keyboard)
+    await callback.message.answer(common_message_text["choose_menu_item"], reply_markup=about_naukma_home_keyboard)
     await callback.answer()
 
 

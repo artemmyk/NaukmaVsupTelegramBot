@@ -8,6 +8,8 @@ from data.text.button_text.studies.studies_button_text import speciality_info_me
 def get_speciality_info_keyboard(study_level: str, faculty: str, speciality: str):
     speciality_info_keyboard = InlineKeyboardMarkup(row_width=2)
 
+
+
     # TODO needs a lot of refactoring
     if study_level == "bachelors":
         general_info_button = InlineKeyboardButton(

@@ -31,7 +31,7 @@ async def back_command(callback: CallbackQuery, state: FSMContext):
     await States.previous()
 
     await callback.message.delete()
-    await callback.message.answer(common_message_text["choose_menu_item"], reply_markup=get_home_keyboard(study_level))
+    await callback.message.answer(common_message_text["choose_menu_item"], reply_markup=get_home_keyboard())
     await callback.answer()
 
 

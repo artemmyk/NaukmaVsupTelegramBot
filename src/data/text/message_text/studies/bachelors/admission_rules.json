@@ -1,0 +1,14 @@
+{
+  "button_admission_system_description": {
+    "budget": "admission for budget",
+    "contract": "admission for contract"
+  },
+  "button_admission_dates": {
+    "budget": "dates for budget",
+    "contract": "dates for contract"
+  },
+  "button_admission_documents": "Документи",
+  "button_admission_electronic_office": "Електронний кабінет",
+  "button_admission_special_conditions": "За спеціальними умовами",
+  "button_admission_commission_website": "google.com"
+}

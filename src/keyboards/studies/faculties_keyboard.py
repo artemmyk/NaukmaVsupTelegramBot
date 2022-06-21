@@ -2,7 +2,6 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from keyboards.common_buttons import button_back, button_exit
 from data.text.button_text.studies.studies_button_text import faculties_menu_button_text
-from data.text.button_text.general_button_text import common_button_text
 
 
 def get_faculties_keyboard():

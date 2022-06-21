@@ -18,4 +18,4 @@ def get_home_keyboard():
     return _home_keyboard
 
 
-home_keyboard = get_home_keyboard()
+about_naukma_home_keyboard = get_home_keyboard()
