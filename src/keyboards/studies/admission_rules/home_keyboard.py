@@ -2,7 +2,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from keyboards.common_buttons import button_back, button_exit
 from data.text.button_text.studies.studies_button_text import admission_rules_main_menu_buttons_text
-from data.text.message_text.studies.bachelors.admisson_rules_text import bachelors_admission_rules_text
+from data.text.message_text.studies.bachelors.admission_rules_text import bachelors_admission_rules_text
 
 
 def get_home_keyboard():

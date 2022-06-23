@@ -5,6 +5,7 @@ from aiogram.types import CallbackQuery
 from handlers.states import States
 from data.text.message_text.text import common_message_text
 from data.text.message_text.studies.bachelors.specialities_info import bachelors_specialities_info_text
+from data.text.message_text.studies.masters.specialities_info import masters_specialities_info_text
 from keyboards.studies.specialities_info_keyboard import get_speciality_info_keyboard
 from keyboards.studies.specialities_keyboard import get_specialities_keyboard
 
@@ -15,8 +16,7 @@ async def get_info_command(button_pressed: str, callback: CallbackQuery, state: 
         faculty = data["faculty_name"]
         speciality = data["speciality_name"]
 
-    # TODO change when masters info is added
-    info_text = bachelors_specialities_info_text if study_level == "bachelors" else bachelors_specialities_info_text
+    info_text = bachelors_specialities_info_text if study_level == "bachelors" else masters_specialities_info_text
 
     await callback.message.delete()
     await callback.message.answer(info_text[faculty][speciality][button_pressed])

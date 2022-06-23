@@ -8,7 +8,8 @@ from keyboards.studies.home_keyboard import get_home_keyboard
 from keyboards.studies.admission_rules.home_keyboard import admission_rules_home_keyboard
 from keyboards.studies.admission_rules.financing_source_keyboard import financing_source_keyboard
 from data.text.button_text.studies.studies_button_text import admission_rules_main_menu_buttons_text
-from data.text.message_text.studies.bachelors.admisson_rules_text import bachelors_admission_rules_text
+from data.text.message_text.studies.bachelors.admission_rules_text import bachelors_admission_rules_text
+from data.text.message_text.studies.masters.admission_rules_text import masters_admission_rules_text
 
 
 async def admission_menu_command(callback: CallbackQuery, state: FSMContext):
@@ -18,8 +19,7 @@ async def admission_menu_command(callback: CallbackQuery, state: FSMContext):
         study_level = data["study_level"]
         data["admission_button"] = button_name
 
-    # TODO add masters
-    admission_rules_text = bachelors_admission_rules_text if study_level == "bachelors" else bachelors_admission_rules_text
+    admission_rules_text = bachelors_admission_rules_text if study_level == "bachelors" else masters_admission_rules_text
 
     await callback.message.delete()
 

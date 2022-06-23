@@ -6,7 +6,8 @@ from handlers.states import States
 from data.text.message_text.text import common_message_text
 from keyboards.studies.admission_rules.home_keyboard import admission_rules_home_keyboard
 from data.text.button_text.studies.studies_button_text import financing_sources_menu_buttons_text
-from data.text.message_text.studies.bachelors.admisson_rules_text import bachelors_admission_rules_text
+from data.text.message_text.studies.bachelors.admission_rules_text import bachelors_admission_rules_text
+from data.text.message_text.studies.masters.admission_rules_text import masters_admission_rules_text
 
 
 async def financing_source_command(callback: CallbackQuery, state: FSMContext):
@@ -16,8 +17,7 @@ async def financing_source_command(callback: CallbackQuery, state: FSMContext):
         study_level = data["study_level"]
         admission_button = data["admission_button"]
 
-    # TODO add masters
-    admission_rules_text = bachelors_admission_rules_text if study_level == "bachelors" else bachelors_admission_rules_text
+    admission_rules_text = bachelors_admission_rules_text if study_level == "bachelors" else masters_admission_rules_text
 
     await States.admission_rules_menu.set()
 

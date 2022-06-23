@@ -1,0 +1,44 @@
+{
+  "fen": {
+    "button_marketing": "Маркетинг",
+    "button_economics": "Економіка",
+    "button_business": "Розвиток бізнесу: управління і консалтинг",
+    "button_finance": "Фінанси",
+    "button_management": "Стратегічне управління"
+  },
+  "fsnst": {
+    "button_psychology": "Психологія",
+    "button_sociology": "Соціологія",
+    "button_public_relations": "Зв’язки з громадськістю",
+    "button_international_relations": "Соціальна робота",
+    "button_anticorruption_studies": "Антикорупційні студії",
+    "button_politology": "Політологія",
+    "button_journalism": "Журналістика"
+  },
+  "fprn": {
+    "button_ecology": "Екологія та охорона навколишнього середовища",
+    "button_physics": "Фізика(теоретична фізика)",
+    "button_molecular_biology": "Молекулярна біологія",
+    "button_lab_diagnostics": "Лабораторна діагностика біологічних систем",
+    "button_chemistry": "Хімія"
+  },
+  "fpvn": {
+    "button_law": "Право",
+    "button_social_politics": "Суспільна політика і врядування"
+  },
+  "fi": {
+    "button_applied_math": "Прикладна математика",
+    "button_ipz": "Інженерія програмного забезпечення",
+    "button_cs": "Комп‘ютерні науки",
+    "button_system_analysis": "Системний аналіз"
+  },
+  "fhn": {
+    "button_languages": "Мови (англійська та українська) та комунікація",
+    "button_history": "Історія",
+    "button_philology_ukrainian": "Філологія. Теорія, історія української мови та компаративістика",
+    "button_judaica": "Юдаїка",
+    "button_culturology": "Культурологія",
+    "button_philosophy": "Філософія",
+    "button_philology_literature": "Філологія. Теорія, історія літератури та компаративістика"
+  }
+}

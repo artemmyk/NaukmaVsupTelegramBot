@@ -1,0 +1,14 @@
+{
+  "button_admission_system_description": {
+    "budget": "",
+    "contract": ""
+  },
+  "button_admission_dates": {
+    "budget": "",
+    "contract": ""
+  },
+  "button_admission_documents": "",
+  "button_admission_electronic_office": "",
+  "button_admission_special_conditions": "",
+  "button_admission_commission_website": "https://vstup.ukma.edu.ua/"
+}
