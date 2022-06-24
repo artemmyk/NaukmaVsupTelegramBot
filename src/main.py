@@ -53,20 +53,18 @@ async def send_message(user_id: int, text: str, disable_notification: bool = Fal
     try:
         await bot.send_message(user_id, text, disable_notification=disable_notification)
     except exceptions.BotBlocked:
-        pass
+        print("Bot is blocked by ", user_id)
     except exceptions.ChatNotFound:
-        pass
+        print("Chat ", user_id, " is not found")
     except exceptions.RetryAfter as e:
         await asyncio.sleep(e.timeout)
         return await send_message(user_id, text)  # Recursive call
     except exceptions.UserDeactivated:
-        pass
+        print(user_id, " is deactivated")
     except exceptions.TelegramAPIError:
-        pass
+        print("TelegramAPIError")
     else:
-        pass
-        return True
-    return False
+        print("some error")
 
 
 if __name__ == '__main__':
