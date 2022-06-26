@@ -17,5 +17,5 @@ fprn_specialities_info = {
     "ecology": ecology_info,
     "lab_diagnostics": lab_diagnostics_info,
     "molecular_biology": molecular_biology_info,
-    "physics_astronomy": physics_info
+    "physics": physics_info
 }
