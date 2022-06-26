@@ -16,7 +16,7 @@ def get_speciality_info_keyboard(study_level: str, faculty: str, speciality: str
     speciality_info_keyboard.add(general_info_button)
 
     is_new_row = True
-    for key in list(speciality_info_menu_button_text.keys())[1:7]:
+    for key in list(speciality_info_menu_button_text.keys())[1:5]:
         button = InlineKeyboardButton(
             text=speciality_info_menu_button_text[key],
             callback_data=key
@@ -29,7 +29,7 @@ def get_speciality_info_keyboard(study_level: str, faculty: str, speciality: str
 
     speciality_info_text = bachelors_specialities_info_text if study_level == "bachelors" else masters_specialities_info_text
 
-    for key in list(speciality_info_menu_button_text.keys())[7:]:
+    for key in list(speciality_info_menu_button_text.keys())[5:]:
         button = InlineKeyboardButton(
             text=speciality_info_menu_button_text[key],
             url=speciality_info_text[faculty][speciality][key]

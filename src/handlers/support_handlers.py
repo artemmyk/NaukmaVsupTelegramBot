@@ -9,7 +9,7 @@ from keyboards.main_menu_keyboard import main_menu_keyboard
 
 async def get_question_command(message: Message, state: FSMContext):
     # TODO: add buddy chat id
-    chat_id = -520239388
+    chat_id = -709588178
 
     await message.bot.forward_message(chat_id=chat_id, from_chat_id=message.chat.id, message_id=message.message_id)
     await message.answer(support_message_text["thanks_for_question"], parse_mode="HTML")

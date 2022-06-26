@@ -9,7 +9,8 @@ from db.operations import check_if_user_in_db, add_user_to_db, check_if_user_is_
 from handlers.register_handlers import register_all_handlers
 from keyboards.main_menu_keyboard import main_menu_keyboard
 
-BOT_TOKEN = "5077592058:AAGPmoUShW56UGfVxNGrJ8c0BNHRPqM98-w"
+# BOT_TOKEN = "5077592058:AAGPmoUShW56UGfVxNGrJ8c0BNHRPqM98-w"
+BOT_TOKEN = "5563573950:AAGqQ3sjOYR1dfkLb4KisKwcX7cp0p6lT8Y"
 
 # Initialize bot and dispatcher
 bot = Bot(token=BOT_TOKEN, parse_mode=types.ParseMode.MARKDOWN_V2)
