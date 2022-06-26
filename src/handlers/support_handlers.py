@@ -11,7 +11,10 @@ async def get_question_command(message: Message, state: FSMContext):
     # TODO: add buddy chat id
     chat_id = -709588178
 
-    await message.bot.forward_message(chat_id=chat_id, from_chat_id=message.chat.id, message_id=message.message_id)
+    try:
+        await message.bot.forward_message(chat_id=chat_id, from_chat_id=message.chat.id, message_id=message.message_id)
+    finally:
+        await message.answer(support_message_text["thanks_for_question"], parse_mode="HTML")
     await message.answer(support_message_text["thanks_for_question"], parse_mode="HTML")
     await message.answer(common_message_text["choose_menu_item"], reply_markup=main_menu_keyboard)
     await state.finish()
