@@ -1,0 +1,6 @@
+README.md
+setup.py
+src/NaukmaVstupTelegramBot.egg-info/PKG-INFO
+src/NaukmaVstupTelegramBot.egg-info/SOURCES.txt
+src/NaukmaVstupTelegramBot.egg-info/dependency_links.txt
+src/NaukmaVstupTelegramBot.egg-info/top_level.txt
