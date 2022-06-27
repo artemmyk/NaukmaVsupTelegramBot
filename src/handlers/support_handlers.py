@@ -11,17 +11,19 @@ async def get_question_command(message: Message, state: FSMContext):
     # TODO: add buddy chat id
     chat_id = -709588178
 
-    await message.bot.forward_message(chat_id=chat_id, from_chat_id=message.chat.id, message_id=message.message_id)
+    await message.bot.send_message(chat_id=chat_id, text=message.text + "\n\nchat_id:" + str(message.chat.id),
+                                   parse_mode="HTML", )
     await message.answer(support_message_text["thanks_for_question"], parse_mode="HTML")
     await message.answer(common_message_text["choose_menu_item"], reply_markup=main_menu_keyboard)
     await state.finish()
 
 
 async def get_answer_command(message: Message):
-    await message.bot.send_message(chat_id=message.from_user.id,
-                                   text=support_message_text["valid_answer_beginning"] + message.reply_to_message.text +
-                                        support_message_text["valid_answer_end"] + message.text, parse_mode="HTML")
-    await message.bot.delete_message(message_id=message.reply_to_message.message_id, chat_id=message.chat.id)
+    await message.bot.send_message(chat_id=int(message.reply_to_message.text.split("chat_id:")[1]),
+                                   text=support_message_text["valid_answer_beginning"] +
+                                        message.reply_to_message.text.split("\n\nchat_id:")[0] +
+                                        support_message_text["valid_answer_end"] +
+                                        message.text, parse_mode="HTML")
 
 
 def register_handlers(dp: Dispatcher):
