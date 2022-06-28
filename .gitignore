@@ -1,3 +1,5 @@
 venv
 .idea
 dist
+src/NaukmaVstupTelegramBot.egg-info
+**/__pycache__
