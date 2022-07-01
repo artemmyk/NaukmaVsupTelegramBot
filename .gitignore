@@ -4,4 +4,3 @@ venv
 dist
 **/__pycache__
 src/NaukmaVstupTelegramBot.egg-info
-Procfile
