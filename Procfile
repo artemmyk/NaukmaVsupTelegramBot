@@ -1,1 +1,1 @@
-release: cd src && python main.py
+web: cd src && python main.py
