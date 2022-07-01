@@ -1,14 +1,16 @@
 from pymongo import MongoClient
+import os
+from dotenv import load_dotenv
 
 """
 This file is responsible for connection to MongoDB
 """
 
+load_dotenv()
+CONNECTION_STRING = os.getenv("CONNECTION_STRING")
+
 
 def get_database():
-    # TODO: hide connection string
-    CONNECTION_STRING = "mongodb+srv://Vadym:1234@cluster0.0ljal.mongodb.net/vstup_bot?retryWrites=true&w=majority"
-
     try:
         client = MongoClient(CONNECTION_STRING)
 
@@ -19,7 +21,6 @@ def get_database():
 
 
 def get_collection():
-
     db = get_database()
     if db is not None:
         return db["users"]
