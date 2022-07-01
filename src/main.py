@@ -19,4 +19,5 @@ dp = Dispatcher(bot, storage=storage)
 register_all_handlers(dp)
 
 if __name__ == '__main__':
+    print("working")
     executor.start_polling(dp, skip_updates=True)
