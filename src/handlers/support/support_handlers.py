@@ -31,6 +31,6 @@ async def get_answer_command(message: Message):
 
 
 def register_handlers(dp: Dispatcher):
-    dp.register_message_handler(get_question_command, state=States.support_main_menu)
     dp.register_message_handler(get_answer_command, chat_type=[types.ChatType.SUPERGROUP, types.ChatType.GROUP],
                                 is_reply=True, state=States.support_main_menu)
+    dp.register_message_handler(get_question_command, state=States.support_main_menu)
