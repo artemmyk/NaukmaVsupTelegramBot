@@ -39,7 +39,7 @@ async def send_message(bot: Bot, user_id: int, text: str, disable_notification: 
     :return:
     """
     try:
-        await bot.send_message(user_id, text, disable_notification=disable_notification)
+        await bot.send_message(user_id, text, disable_notification=disable_notification, parse_mode="HTML")
     except exceptions.BotBlocked:
         print("Bot is blocked by ", user_id)
     except exceptions.ChatNotFound:
@@ -51,8 +51,6 @@ async def send_message(bot: Bot, user_id: int, text: str, disable_notification: 
         print(user_id, " is deactivated")
     except exceptions.TelegramAPIError:
         print("TelegramAPIError")
-    else:
-        print("some error")
 
 
 def register_handlers(dp: Dispatcher):
