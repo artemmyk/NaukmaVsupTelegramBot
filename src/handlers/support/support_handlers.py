@@ -22,9 +22,9 @@ async def get_question_command(message: Message, state: FSMContext):
 
 async def get_answer_command(message: Message):
     await message.bot.send_message(
-        chat_id=int(message.reply_to_message.text.split("chat_id:")[1]),
+        chat_id=int(message.reply_to_message.text.split("\n\nchat_id: ")[1]),
         text=support_message_text["valid_answer_beginning"] +
-             message.reply_to_message.text.split("\n\nchat_id:")[0] +
+             message.reply_to_message.text.split("\n\nchat_id: ")[0] +
              support_message_text["valid_answer_end"] +
              message.text, parse_mode="HTML"
     )
@@ -32,5 +32,5 @@ async def get_answer_command(message: Message):
 
 def register_handlers(dp: Dispatcher):
     dp.register_message_handler(get_answer_command, chat_type=[types.ChatType.SUPERGROUP, types.ChatType.GROUP],
-                                is_reply=True, state=States.support_main_menu)
+                                is_reply=True)
     dp.register_message_handler(get_question_command, state=States.support_main_menu)

@@ -11,8 +11,8 @@ from handlers.about_naukma import about_naukma_home_handlers, student_activity_h
 def register_all_handlers(dp: Dispatcher):
     basic_handlers.register_handlers(dp)
     common_handlers.register_handlers(dp)
-    main_menu_handlers.register_handlers(dp)
     support_handlers.register_handlers(dp)
+    main_menu_handlers.register_handlers(dp)
     studies_home_handlers.register_handlers(dp)
     faculties_handlers.register_handlers(dp)
     specialities_handlers.register_handlers(dp)
