@@ -1,0 +1,38 @@
+{
+  "fen": {
+    "economics": "0.35 0.4 0.25",
+    "finance": "0.35 0.4 0.25",
+    "management": "0.35 0.4 0.25",
+    "marketing": "0.35 0.4 0.25"
+  },
+  "fhn": {
+    "culturology": "0.25 0.25 0.5",
+    "german_philology": "0.4 0.3 0.3",
+    "history": "0.25 0.25 0.5",
+    "philosophy": "0.35 0.25 0.4",
+    "ukrainian_philology": "0.5 0.25 0.25"
+  },
+  "fi": {
+    "applied_math": "0.3 0.5 0.2",
+    "cs": "0.3 0.5 0.2",
+    "ipz": "0.3 0.5 0.2"
+  },
+  "fprn": {
+    "bio": "0.3 0.35 0.35",
+    "chemistry": "0.3 0.35 0.35",
+    "ecology": "0.3 0.35 0.35",
+    "physics_astronomy": "0.35 0.5 0.2"
+  },
+  "fpvn": {
+    "government": "0.3 0.4 0.3",
+    "law": "0.35 0.25 0.4"
+  },
+  "fsnst": {
+    "international_relations": "0.4 0.3 0.3",
+    "politology": "0.35 0.4 0.25",
+    "psychology": "0.35 0.4 0.25",
+    "public_relations": "0.45 0.3 0.25",
+    "social_work": "0.35 0.4 0.25",
+    "sociology": "0.35 0.4 0.25"
+  }
+}

@@ -2,7 +2,6 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.dispatcher import filters
 from aiogram.utils import exceptions
 import asyncio
-from main import bot
 
 from db.operations import check_if_user_in_db, add_user_to_db, check_if_user_is_admin, get_all_chat_ids
 from data.text.message_text.text import basic_message_text
@@ -26,7 +25,7 @@ async def admin(message: types.Message):
         text = message.text.replace(basic_message_text["message_for_all_keycode"], "")
 
         for user_id in get_all_chat_ids():
-            await send_message(bot, user_id, text)
+            await send_message(message.bot, user_id, text)
             await asyncio.sleep(.05)
 
 
@@ -40,7 +39,7 @@ async def send_message(bot: Bot, user_id: int, text: str):
     :return:
     """
     try:
-        await bot.send_message(user_id, text, disable_notification=False)
+        await bot.send_message(user_id, text, disable_notification=False, parse_mode="HTML")
     except exceptions.BotBlocked:
         print("Bot is blocked by ", user_id)
     except exceptions.ChatNotFound:
