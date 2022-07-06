@@ -1,9 +1,12 @@
+import json
+
 from data.text.message_text.studies.bachelors.specialities_info.fen import fen_specialities_info
 from data.text.message_text.studies.bachelors.specialities_info.fhn import fhn_specialities_info
 from data.text.message_text.studies.bachelors.specialities_info.fi import fi_specialities_info
 from data.text.message_text.studies.bachelors.specialities_info.fprn import fprn_specialities_info
 from data.text.message_text.studies.bachelors.specialities_info.fpvn import fpvn_specialities_info
 from data.text.message_text.studies.bachelors.specialities_info.fsnst import fsnst_specialities_info
+from data.text.parser import replace_reserved_characters
 
 bachelors_specialities_info_text = {
     "fen": fen_specialities_info,
@@ -13,3 +16,6 @@ bachelors_specialities_info_text = {
     "fpvn": fpvn_specialities_info,
     "fsnst": fsnst_specialities_info,
 }
+
+bachelors_general_specialities_info_text = replace_reserved_characters(
+    json.load(open("data/text/message_text/studies/bachelors/specialities_info/general.json", encoding="utf-8")))

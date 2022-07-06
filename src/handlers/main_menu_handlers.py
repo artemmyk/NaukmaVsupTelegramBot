@@ -44,10 +44,10 @@ async def support_command(message: Message):
 
 def register_handlers(dp: Dispatcher):
     dp.register_message_handler(bachelor_command, Text(equals=main_menu_button_text["button_bachelors"]),
-                                chat_type=[types.ChatType.PRIVATE])
+                                chat_type=[types.ChatType.PRIVATE], state="*")
     dp.register_message_handler(masters_command, Text(equals=main_menu_button_text["button_masters"]),
-                                chat_type=[types.ChatType.PRIVATE])
+                                chat_type=[types.ChatType.PRIVATE], state="*")
     dp.register_message_handler(about_naukma_command, Text(equals=main_menu_button_text["button_about_naukma"]),
-                                chat_type=[types.ChatType.PRIVATE])
+                                chat_type=[types.ChatType.PRIVATE], state="*")
     dp.register_message_handler(support_command, Text(equals=main_menu_button_text["button_support"]),
-                                chat_type=[types.ChatType.PRIVATE])
+                                chat_type=[types.ChatType.PRIVATE], state="*")
