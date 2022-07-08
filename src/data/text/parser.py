@@ -14,4 +14,6 @@ def replace(string):
         return string
     return string.replace(".", "\\.") \
                 .replace(",", "\\,").replace(";", "\\;").replace("(", "\\(").replace(")", "\\)") \
-                .replace("!", "\\!").replace("?", "\\?").replace("-", "\\-").replace("<@", "(").replace("@>", ")")
+                .replace("!", "\\!").replace("?", "\\?").replace("-", "\\-").replace("<@", "(").replace("@>", ")") \
+                .replace("на сайті НаУКМА", "на сайті Могилянки").replace("сайт приймальної комісії НаУКМА",
+                                                                          "сайт приймальної комісії Могилянки")

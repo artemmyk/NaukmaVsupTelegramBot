@@ -1,4 +1,5 @@
 from data.info.coef import coef
+import re
 
 
 def calculate_score(message, faculty, speciality):
@@ -18,33 +19,33 @@ def calculate_score(message, faculty, speciality):
     # delete decimal point if grade is whole number
     if grade - int(grade) == 0:
         grade = int(grade)
+    else:
+        grade = round(grade, 3)
 
     return f"Ваш бал: {grade}"
 
 
 def parse_message(message):
-    # split message into words by spaces
-    words = message.split()
 
-    # check if enough words (has to be 3)
-    # if more than 3 take only first 3
-    if len(words) < 3:
+    # look for all numbers in a message using regular expression
+    grades = re.findall("[0-9]+\.?[0-9]+", message.replace(",", "."))
+    # check if there are enough grades
+    if len(grades) < 3:
         return "Введіть бали з трьох предметів"
     else:
-        words = words[:3]
+        grades = grades[:3]
 
-    # check if words are numbers
-    # if numbers also check if in correct range
-    grades = []
-    for word in words:
+    # loop through every grade and try to cast it to float type
+    for i in range(3):
         try:
-            grade = float(word.replace(",", "."))
+            grade = float(grades[i])
+            # check if in correct range
             if grade < 100 or grade > 200:
-                return f"Введений бал {word} має бути в межах від 100 до 200"
+                return f"Введений бал {grades[i]} має бути в межах від 100 до 200"
             else:
-                grades.append(grade)
+                grades[i] = grade
         except ValueError:
-            return f"Введене число {word} є невірним"
+            return f"Введене число {grades[i]} є невірним"
 
     return grades
 
