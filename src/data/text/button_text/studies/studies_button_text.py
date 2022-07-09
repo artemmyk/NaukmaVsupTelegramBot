@@ -24,4 +24,8 @@ masters_specialities_menu_button_text = json.load(
 
 # text of speciality info
 speciality_info_menu_button_text = json.load(
+    open("data/text/button_text/studies/specialities_info_for_zno.json", encoding="utf-8"))
+
+# text of speciality info
+speciality_info_for_masters_menu_button_text = json.load(
     open("data/text/button_text/studies/specialities_info.json", encoding="utf-8"))

@@ -6,6 +6,7 @@ class States(StatesGroup):
     faculties_menu = State()
     specialities_menu = State()
     speciality_info_menu = State()
+    asking_for_grades = State()
     admission_rules_menu = State()
     financing_source_menu = State()
     about_naukma_main_menu = State()
