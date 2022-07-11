@@ -2,7 +2,7 @@ from data.info.coef import coef
 import re
 
 
-def calculate_score(message, faculty, speciality):
+async def calculate_score(message, faculty, speciality):
     # parse message
     grades = parse_message(message)
 
@@ -25,7 +25,7 @@ def calculate_score(message, faculty, speciality):
     return f"Ваш бал: {grade}"
 
 
-def parse_message(message):
+async def parse_message(message):
 
     # look for all numbers in a message using regular expression
     grades = re.findall("[0-9]+\.?[0-9]+", message.replace(",", "."))
@@ -50,5 +50,5 @@ def parse_message(message):
     return grades
 
 
-def parse_coeficients(faculty, speciality):
+async def parse_coeficients(faculty, speciality):
     return [float(x) for x in coef[faculty][speciality].split()]
