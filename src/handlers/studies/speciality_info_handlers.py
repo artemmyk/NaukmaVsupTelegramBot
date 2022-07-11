@@ -65,7 +65,7 @@ async def get_grades_command(message: Message, state: FSMContext):
         faculty = data["faculty_name"]
         speciality = data["speciality_name"]
 
-    score = calculate_score(message.text, faculty, speciality)
+    score = await calculate_score(message.text, faculty, speciality)
     await message.answer(score, parse_mode="HTML")
     await message.answer(common_message_text["choose_menu_item"],
                          reply_markup=get_speciality_info_keyboard(study_level, faculty, speciality))

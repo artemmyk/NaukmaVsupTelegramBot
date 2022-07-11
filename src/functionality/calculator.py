@@ -4,14 +4,14 @@ import re
 
 async def calculate_score(message, faculty, speciality):
     # parse message
-    grades = parse_message(message)
+    grades = await parse_message(message)
 
     # if error in parsing return error
     if type(grades) != list:
         return grades
 
     # parse coeficients
-    coeficients = parse_coeficients(faculty, speciality)
+    coeficients = await parse_coeficients(faculty, speciality)
 
     # calculate grade
     grade = sum([grades[i] * coeficients[i] for i in range(3)])
