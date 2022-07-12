@@ -14,17 +14,17 @@ async def send_welcome(message: types.Message):
     """
 
     # check if user is in database (if not then add to db)
-    if not check_if_user_in_db(message.from_user.id):
-        add_user_to_db(message.from_user.id)
+    if not await check_if_user_in_db(message.from_user.id):
+        await add_user_to_db(message.from_user.id)
 
     await message.answer(basic_message_text["hey_there"], reply_markup=main_menu_keyboard)
 
 
 async def admin(message: types.Message):
-    if check_if_user_is_admin(message.from_user.id):
+    if await check_if_user_is_admin(message.from_user.id):
         text = message.text.replace(basic_message_text["message_for_all_keycode"], "")
 
-        for user_id in get_all_chat_ids():
+        for user_id in await get_all_chat_ids():
             await send_message(message.bot, user_id, text)
             await asyncio.sleep(.05)
 

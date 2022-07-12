@@ -13,7 +13,6 @@ CONNECTION_STRING = os.getenv("CONNECTION_STRING")
 async def get_database():
     try:
         client = MongoClient(CONNECTION_STRING)
-        print("a")
         return client.get_database("vstup_bot")
     except:
         print("Database connection failed")
@@ -21,7 +20,7 @@ async def get_database():
 
 
 async def get_collection():
-    db = get_database()
+    db = await get_database()
     if db is not None:
         return db["users"]
     return None
