@@ -26,7 +26,6 @@ async def calculate_score(message, faculty, speciality):
 
 
 async def parse_message(message):
-
     # look for all numbers in a message using regular expression
     grades = re.findall("[0-9]+\.?[0-9]+", message.replace(",", "."))
     # check if there are enough grades
