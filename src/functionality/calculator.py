@@ -1,5 +1,6 @@
-from data.info.coef import coef
 import re
+
+from src.data.calculation.coef import coef
 
 
 async def calculate_score(message, faculty, speciality):
