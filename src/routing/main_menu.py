@@ -6,6 +6,7 @@ from aiogram.types import Message, CallbackQuery
 
 import src.data.buttons as buttons
 import src.data.keyboards as keyboards
+import src.data.memes as memes
 from src.data.answers import BASIC, CHOOSE_MENU_ITEM
 from src.functionality.util import handle_button
 
@@ -55,4 +56,10 @@ async def about_university(message: Message):
 @router.message(Degree.idle, Text(text=buttons.SUPPORT.text))
 async def support(message: Message):
     await message.answer(text=CHOOSE_MENU_ITEM, reply_markup=keyboards.SUPPORT)
+
+
+@router.message(Degree.idle, Text(text=buttons.MEMES.text))
+async def meme(message: Message):
+    await message.answer_photo(photo=memes.get_random_file_id(), reply_markup=keyboards.MAIN)
+
 

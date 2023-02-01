@@ -11,7 +11,8 @@ from src.data.faculties import BACHELOR_FACULTIES, MASTER_FACULTIES
 
 MAIN = ReplyKeyboardBuilder(markup=[
     [BACHELOR, MASTER],
-    [ABOUT_UNIVERSITY, SUPPORT]
+    [ABOUT_UNIVERSITY, SUPPORT],
+    [MEMES]
 ]).as_markup()
 
 
