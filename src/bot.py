@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 
 import src.routing.degree as degree
 import src.routing.main_menu as main_menu
+import src.routing.admin as admin
 
 # import src.data.keyboards as keyboards
 
@@ -28,6 +29,7 @@ async def main():
 
     dp.include_router(main_menu.router)
     dp.include_router(degree.router)
+    dp.include_router(admin.router)
 
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
