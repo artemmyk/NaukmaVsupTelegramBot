@@ -15,7 +15,6 @@ MAIN = ReplyKeyboardBuilder(markup=[
     [MEMES]
 ]).as_markup()
 
-
 SPECIALITY = InlineKeyboardBuilder(markup=[
     [GENERAL_INFO],
     [DISCIPLINES, TEST],
@@ -24,7 +23,6 @@ SPECIALITY = InlineKeyboardBuilder(markup=[
     [SITE],
     [BackButton(Menu.MAIN), EXIT]
 ]).as_markup()
-
 
 ABOUT_UNIVERSITY = InlineKeyboardBuilder(markup=[
     [GENERAL_INFO],
@@ -35,11 +33,9 @@ ABOUT_UNIVERSITY = InlineKeyboardBuilder(markup=[
     [EXIT]
 ]).as_markup()
 
-
 SUPPORT = InlineKeyboardBuilder(markup=[
     [BackButton(Menu.MAIN), EXIT]
 ]).as_markup()
-
 
 ABOUT_ACTIVITIES = InlineKeyboardBuilder(markup=[
     [ORGANISATIONS],
@@ -50,7 +46,6 @@ ABOUT_ACTIVITIES = InlineKeyboardBuilder(markup=[
     [BackButton(Menu.ABOUT_UNIVERSITY), EXIT]
 ]).as_markup()
 
-
 INFRASTRUCTURE = InlineKeyboardBuilder(markup=[
     [CAMPUS],
     [WHERE_TO_EAT],
@@ -58,25 +53,30 @@ INFRASTRUCTURE = InlineKeyboardBuilder(markup=[
     [BackButton(Menu.ABOUT_UNIVERSITY), EXIT]
 ]).as_markup()
 
-
 DEGREE = InlineKeyboardBuilder([
     [FACULTIES],
     [ADMISSION_RULES],
     [EXIT]
 ]).as_markup()
 
-
 FINANCING_SOURCES = InlineKeyboardBuilder(markup=[
     [BUDGET, CONTRACT],
     [BackButton(Menu.ABOUT_UNIVERSITY)]
 ]).as_markup()
 
-
 BACHELOR_FACULTIES = InlineKeyboardBuilder(markup=[
     *[[faculty.as_button] for faculty in BACHELOR_FACULTIES.values()],
     [BackButton(Menu.DEGREE), EXIT]]).as_markup()
 
-
 MASTER_FACULTIES = InlineKeyboardBuilder(markup=[
     *[[faculty.as_button] for faculty in MASTER_FACULTIES.values()],
     [BackButton(Menu.DEGREE), EXIT]]).as_markup()
+
+# admin keyboards
+ADMIN = ReplyKeyboardBuilder(markup=[
+    [ADD_MEME]
+]).as_markup()
+
+CANCEL = ReplyKeyboardBuilder(markup=[
+    [CANCEL]
+]).as_markup()

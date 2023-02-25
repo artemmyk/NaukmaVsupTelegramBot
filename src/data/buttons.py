@@ -52,3 +52,8 @@ ADMISSION_RULES: InlineKeyboardButton = create_inline_button("Правила в�
 # FINANCING SOURCES
 BUDGET: InlineKeyboardButton = create_inline_button("Бюджет", "budget")
 CONTRACT: InlineKeyboardButton = create_inline_button("Контракт", "contract")
+
+# ADMIN
+ADD_MEME: KeyboardButton = create_keyboard_button("Додати приколюху")
+
+CANCEL: KeyboardButton = create_keyboard_button("Скасувати")

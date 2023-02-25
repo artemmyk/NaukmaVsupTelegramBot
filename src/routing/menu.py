@@ -11,3 +11,4 @@ class Menu(str, Enum):
     DEGREE = "degree"
     FACULTIES = "faculties"
     FINANCING_SOURCES = "financing_sources"
+    ADMIN = "admin"
