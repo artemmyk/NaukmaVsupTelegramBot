@@ -1,3 +1,4 @@
+import aiogram.exceptions
 from aiogram import Router
 from aiogram.filters import Command, Text
 from aiogram.fsm.context import FSMContext
@@ -60,6 +61,12 @@ async def support(message: Message):
 
 @router.message(Degree.idle, Text(text=buttons.MEMES.text))
 async def meme(message: Message):
-    await message.answer_photo(photo=memes.get_random_file_id(), reply_markup=keyboards.MAIN)
-
-
+    file = await memes.get_random_file_id()
+    if file == "":
+        await message.answer(text="not working", reply_markup=keyboards.MAIN)
+    try:
+        await message.answer_photo(photo=file, reply_markup=keyboards.MAIN)
+    except aiogram.exceptions.TelegramBadRequest:
+        print("trying again")
+        await memes.remove_file_id(file)  # remove rigged file_id
+        await meme(message)  # try sending again
