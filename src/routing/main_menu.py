@@ -2,7 +2,7 @@ from aiogram import Router
 from aiogram.filters import Command, Text
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
-from aiogram.types import Message, CallbackQuery
+from aiogram.types import Message, CallbackQuery, FSInputFile
 
 import src.data.buttons as buttons
 import src.data.keyboards as keyboards
@@ -60,6 +60,6 @@ async def support(message: Message):
 
 @router.message(Degree.idle, Text(text=buttons.MEMES.text))
 async def meme(message: Message):
-    await message.answer_photo(photo=memes.get_random_file_id(), reply_markup=keyboards.MAIN)
+    await message.answer_photo(photo=FSInputFile(memes.get_random_file()), reply_markup=keyboards.MAIN)
 
 
