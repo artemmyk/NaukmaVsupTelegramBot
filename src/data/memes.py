@@ -1,9 +1,8 @@
+import os
 import random
 
-FILE_IDS = [
-    "AgACAgIAAxkBAAEcrPJj2tAaDX8lN30-iAg5IZuvxuq05wACw8gxGyWS2EpiniZ1XbMHQwEAAwIAA3kAAy4E",
-]
+FILE_DIR = "src/data/img/"
 
-
-def get_random_file_id():
-    return random.choice(FILE_IDS)
+def get_random_file():
+    files = [f for f in os.listdir(FILE_DIR) if os.path.isfile(os.path.join(FILE_DIR, f))]
+    return FILE_DIR + random.choice(files)
