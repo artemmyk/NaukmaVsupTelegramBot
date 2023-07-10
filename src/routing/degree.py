@@ -86,4 +86,4 @@ async def choose_master_speciality(callback_query: CallbackQuery, callback_data:
 @router.callback_query(handle_button(*inline_buttons(keyboards.SPECIALITY)))
 async def speciality_info(callback_query: CallbackQuery, state: FSMContext):
     _, speciality = await get_data_from_state(state)
-    await callback_query.message.answer(text=getattr(speciality, callback_query.data))
+    await callback_query.message.answer(text=getattr(speciality, callback_query.data), parse_mode="html")

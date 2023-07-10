@@ -1,13 +1,12 @@
 from dataclasses import dataclass
-from typing import Optional, Dict
 
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
+from src.data.buttons import create_inline_button, EXIT
 from src.data.speciality import Speciality
 from src.routing.back_button import BackButton
 from src.routing.menu import Menu
-from src.data.buttons import create_inline_button, EXIT
 
 
 @dataclass

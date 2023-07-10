@@ -1,6 +1,4 @@
-from typing import Optional
-
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup, Update
+from aiogram.types import KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 
 
 # Return a single list from a list of lists.

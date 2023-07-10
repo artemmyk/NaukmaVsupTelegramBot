@@ -9,8 +9,6 @@ from dotenv import load_dotenv
 import src.routing.degree as degree
 import src.routing.main_menu as main_menu
 
-# import src.data.keyboards as keyboards
-
 # Load environment variables
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")

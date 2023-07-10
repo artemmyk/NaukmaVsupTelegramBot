@@ -1,13 +1,9 @@
-from typing import Optional
-
-from aiogram.types import InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 
 from src.data.buttons import *
-from src.routing.back_button import BackButton
-from src.routing.main_menu import Degree
-from src.routing.menu import Menu
 from src.data.faculties import BACHELOR_FACULTIES, MASTER_FACULTIES
+from src.routing.back_button import BackButton
+from src.routing.menu import Menu
 
 MAIN = ReplyKeyboardBuilder(markup=[
     [BACHELOR, MASTER],
