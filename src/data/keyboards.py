@@ -7,7 +7,8 @@ from src.routing.menu import Menu
 
 MAIN = ReplyKeyboardBuilder(markup=[
     [BACHELOR, MASTER],
-    [ABOUT_UNIVERSITY, SUPPORT]
+    [ABOUT_UNIVERSITY, SUPPORT],
+    [MEMES]
 ]).as_markup()
 
 

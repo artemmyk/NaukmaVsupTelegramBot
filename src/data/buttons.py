@@ -16,6 +16,7 @@ BACHELOR: KeyboardButton = create_keyboard_button("Бакалавр")
 MASTER: KeyboardButton = create_keyboard_button("Магістр")
 ABOUT_UNIVERSITY: KeyboardButton = create_keyboard_button("Про Могилянку")
 SUPPORT: KeyboardButton = create_keyboard_button("Підтримка")
+MEMES: KeyboardButton = create_keyboard_button("Приколюха")
 
 # SPECIALTY INFO
 GENERAL_INFO: InlineKeyboardButton = create_inline_button("Загальна інформація", "info")
