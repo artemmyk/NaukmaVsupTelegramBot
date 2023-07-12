@@ -61,7 +61,7 @@ async def support(message: Message):
     await message.answer(text=CHOOSE_MENU_ITEM, reply_markup=keyboards.SUPPORT)
 
 
-@router.message(Degree.idle, Text(text=buttons.MEMES.text))
+@router.message(State.idle, Text(text=buttons.MEMES.text))
 async def meme(message: Message):
     await message.answer_photo(photo=memes.get_random_file_id(), reply_markup=keyboards.MAIN)
 
