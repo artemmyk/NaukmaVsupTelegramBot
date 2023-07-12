@@ -34,7 +34,15 @@ class Speciality:
 
 
 def to_markdown(string: str) -> str:
-    return string.replace(".", "\.") \
-                 .replace("-", "\-") \
-                 .replace("=", "\=") \
-                 .replace(">", "\>")
+    if string.startswith("https"):
+        return string
+    return string.replace("[сайт приймальної комісії НаУКМА]<@https://vstup.ukma.edu.ua/golovna/pryjmalna-komisiya/@>",
+                          "[сайт]<@https://vstup.ukma.edu.ua/@> приймальної комісії НаУКМА") \
+        .replace("https://vstup.ukma.edu.ua/wp-content/uploads/2022/05/motyvaciyniy_lyst_2022.pdf",
+                 "https://vstup.ukma.edu.ua/bachelor/motyvaciyniy-lyst-2022") \
+        .replace("МТНК(магістерський тест навчальної компетентності) та фаховий іспит",
+                 "МТНК(магістерський тест навчальної компетентності) та фаховий іспит (детальніше [тут]<@https://vstup.ukma.edu.ua/master-degree/mkt-mtnk@>)") \
+        .replace("на сайті НаУКМА", "на сайті Могилянки") \
+        .replace(".", "\\.") \
+        .replace(",", "\\,").replace(";", "\\;").replace("(", "\\(").replace(")", "\\)") \
+        .replace("!", "\\!").replace("?", "\\?").replace("-", "\\-").replace("<@", "(").replace("@>", ")")

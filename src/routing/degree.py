@@ -9,7 +9,7 @@ from src.data.faculty import Faculty
 from src.data.speciality import Speciality, SpecialityCallback
 from src.functionality.util import handle_button, inline_buttons
 from src.routing.back_button import NavigateBackCallback
-from src.routing.main_menu import Degree
+from src.routing.main_menu import State
 from src.routing.menu import Menu
 
 router = Router()
@@ -22,7 +22,7 @@ async def get_data_from_state(state: FSMContext):
     faculty_callback = data.get('faculty')
     speciality_callback = data.get('speciality')
 
-    faculty_list = BACHELOR_FACULTIES if degree is Degree.bachelor else MASTER_FACULTIES
+    faculty_list = BACHELOR_FACULTIES if degree is State.bachelor else MASTER_FACULTIES
 
     faculty: Faculty = faculty_list[faculty_callback]
 
@@ -38,12 +38,12 @@ async def back_from_faculties(callback_query: CallbackQuery):
     await callback_query.message.edit_reply_markup(keyboards.DEGREE)
 
 
-@router.callback_query(Degree.bachelor, handle_button(buttons.FACULTIES))
+@router.callback_query(State.bachelor, handle_button(buttons.FACULTIES))
 async def bachelor_faculties(callback_query: CallbackQuery):
     await callback_query.message.edit_reply_markup(keyboards.BACHELOR_FACULTIES)
 
 
-@router.callback_query(Degree.master, handle_button(buttons.FACULTIES))
+@router.callback_query(State.master, handle_button(buttons.FACULTIES))
 async def bachelor_faculties(callback_query: CallbackQuery):
     await callback_query.message.edit_reply_markup(keyboards.MASTER_FACULTIES)
 
@@ -52,32 +52,32 @@ async def bachelor_faculties(callback_query: CallbackQuery):
 async def back_from_specialities(callback_query: CallbackQuery, state: FSMContext):
     degree = await state.get_state()
     await callback_query.message.edit_reply_markup(
-        keyboards.BACHELOR_FACULTIES if degree is Degree.bachelor else keyboards.MASTER_FACULTIES
+        keyboards.BACHELOR_FACULTIES if degree is State.bachelor else keyboards.MASTER_FACULTIES
     )
 
 
-@router.callback_query(Degree.bachelor, handle_button(*inline_buttons(keyboards.BACHELOR_FACULTIES)))
+@router.callback_query(State.bachelor, handle_button(*inline_buttons(keyboards.BACHELOR_FACULTIES)))
 async def choose_bachelor_faculty(callback_query: CallbackQuery, state: FSMContext):
     chosen_faculty = BACHELOR_FACULTIES[callback_query.data]
     await state.update_data(faculty=chosen_faculty.callback_data)
     await callback_query.message.edit_reply_markup(chosen_faculty.specialities_as_markup)
 
 
-@router.callback_query(Degree.master, handle_button(*inline_buttons(keyboards.MASTER_FACULTIES)))
+@router.callback_query(State.master, handle_button(*inline_buttons(keyboards.MASTER_FACULTIES)))
 async def choose_master_faculty(callback_query: CallbackQuery, state: FSMContext):
     chosen_faculty = MASTER_FACULTIES[callback_query.data]
     await state.update_data(faculty=chosen_faculty.callback_data)
     await callback_query.message.edit_reply_markup(chosen_faculty.specialities_as_markup)
 
 
-@router.callback_query(Degree.bachelor, SpecialityCallback.filter())
+@router.callback_query(State.bachelor, SpecialityCallback.filter())
 async def choose_bachelor_speciality(callback_query: CallbackQuery, callback_data: SpecialityCallback,
                                      state: FSMContext):
     await state.update_data(speciality=callback_data)
     await callback_query.message.edit_reply_markup(keyboards.SPECIALITY)
 
 
-@router.callback_query(Degree.master, SpecialityCallback.filter())
+@router.callback_query(State.master, SpecialityCallback.filter())
 async def choose_master_speciality(callback_query: CallbackQuery, callback_data: SpecialityCallback, state: FSMContext):
     await state.update_data(speciality=callback_data)
     await callback_query.message.edit_reply_markup(keyboards.SPECIALITY)
@@ -86,4 +86,4 @@ async def choose_master_speciality(callback_query: CallbackQuery, callback_data:
 @router.callback_query(handle_button(*inline_buttons(keyboards.SPECIALITY)))
 async def speciality_info(callback_query: CallbackQuery, state: FSMContext):
     _, speciality = await get_data_from_state(state)
-    await callback_query.message.answer(text=getattr(speciality, callback_query.data), parse_mode="html")
+    await callback_query.message.answer(text=getattr(speciality, callback_query.data), parse_mode="MarkdownV2")
