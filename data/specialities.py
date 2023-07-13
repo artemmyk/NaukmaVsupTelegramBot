@@ -1,4 +1,4 @@
-from src.data.faculties import BACHELOR_FACULTIES, MASTER_FACULTIES
+from data.faculties import BACHELOR_FACULTIES, MASTER_FACULTIES
 
 BACHELOR_SPECIALITIES = {faculty.callback_data: faculty.specialities for faculty in BACHELOR_FACULTIES}
 

@@ -2,15 +2,15 @@ from aiogram import Router, F
 from aiogram.fsm.context import FSMContext
 from aiogram.types import CallbackQuery
 
-import src.data.buttons as buttons
-import src.data.keyboards as keyboards
-from src.data.faculties import BACHELOR_FACULTIES, MASTER_FACULTIES
-from src.data.faculty import Faculty
-from src.data.speciality import Speciality, SpecialityCallback
-from src.functionality.util import handle_button, inline_buttons
-from src.routing.back_button import NavigateBackCallback
-from src.routing.main_menu import State
-from src.routing.menu import Menu
+import data.buttons as buttons
+import data.keyboards as keyboards
+from data.faculties import BACHELOR_FACULTIES, MASTER_FACULTIES
+from data.faculty import Faculty
+from data.speciality import Speciality, SpecialityCallback
+from functionality.util import handle_button, inline_buttons
+from routing.back_button import NavigateBackCallback
+from routing.main_menu import State
+from routing.menu import Menu
 
 router = Router()
 

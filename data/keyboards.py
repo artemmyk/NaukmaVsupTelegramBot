@@ -1,9 +1,9 @@
 from aiogram.utils.keyboard import InlineKeyboardBuilder, ReplyKeyboardBuilder
 
-from src.data.buttons import *
-from src.data.faculties import BACHELOR_FACULTIES, MASTER_FACULTIES
-from src.routing.back_button import BackButton
-from src.routing.menu import Menu
+from data.buttons import *
+from data.faculties import BACHELOR_FACULTIES, MASTER_FACULTIES
+from routing.back_button import BackButton
+from routing.menu import Menu
 
 MAIN = ReplyKeyboardBuilder(markup=[
     [BACHELOR, MASTER],

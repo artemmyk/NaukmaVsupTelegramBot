@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from aiogram.filters.callback_data import CallbackData
 from aiogram.types import InlineKeyboardButton
 
-from src.data.buttons import create_inline_button
+from data.buttons import create_inline_button
 
 
 class SpecialityCallback(CallbackData, prefix="speciality"):

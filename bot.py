@@ -6,8 +6,8 @@ from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from dotenv import load_dotenv
 
-import src.routing.degree as degree
-import src.routing.main_menu as main_menu
+import routing.degree as degree
+import routing.main_menu as main_menu
 
 # Load environment variables
 load_dotenv()

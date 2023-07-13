@@ -3,10 +3,10 @@ from dataclasses import dataclass
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
-from src.data.buttons import create_inline_button, EXIT
-from src.data.speciality import Speciality
-from src.routing.back_button import BackButton
-from src.routing.menu import Menu
+from data.buttons import create_inline_button, EXIT
+from data.speciality import Speciality
+from routing.back_button import BackButton
+from routing.menu import Menu
 
 
 @dataclass

@@ -4,11 +4,11 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.types import Message, CallbackQuery
 
-import src.data.buttons as buttons
-import src.data.keyboards as keyboards
-import src.data.memes as memes
-from src.data.answers import BASIC, CHOOSE_MENU_ITEM
-from src.functionality.util import handle_button
+import data.buttons as buttons
+import data.keyboards as keyboards
+import data.memes as memes
+from data.answers import BASIC, CHOOSE_MENU_ITEM
+from functionality.util import handle_button
 
 router = Router()
 

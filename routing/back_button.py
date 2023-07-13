@@ -1,7 +1,7 @@
 from aiogram.filters.callback_data import CallbackData
 from aiogram.types import InlineKeyboardButton
 
-from src.routing.menu import Menu
+from routing.menu import Menu
 
 
 class NavigateBackCallback(CallbackData, prefix="back"):
